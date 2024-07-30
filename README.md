@@ -1,4 +1,4 @@
-# Twitch Viewer Bot
+# PAINSTAKINGLY SLOW Twitch Viewer Bot
 
 ## Overview
 
