@@ -14,7 +14,6 @@ import time
 import chromedriver_autoinstaller
 from selenium.common.exceptions import WebDriverException
 
-# Initialize colorama
 init(autoreset=True)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -63,7 +62,6 @@ def print_announcement():
         print("Could not retrieve announcement.\n")
 
 def fade_print(text):
-    # Function to print text with a cyan to dark blue fade gradient
     gradient = Colorate.Vertical(Colors.cyan_to_blue, text)
     print(gradient)
 
@@ -128,7 +126,6 @@ def main():
     fade_print('')
     fade_print("Viewers Send. Please don't hurry. If the viewers do not arrive, turn it off and on and do the same operations")
 
-    # Install ChromeDriver automatically
     chromedriver_autoinstaller.install()
 
     chrome_path = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
@@ -148,7 +145,7 @@ def main():
     driver.get(proxy_url)
 
     for i in range(proxy_count):
-        random_proxy_url = selectRandom(proxy_servers)  # Select a random proxy server for this tab
+        random_proxy_url = selectRandom(proxy_servers)  
         driver.execute_script("window.open('" + random_proxy_url + "')")
         driver.switch_to.window(driver.window_handles[-1])
         
